@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+int n;
+cin >>n;
+int events[n];
+for (int i=0;i<n;i++){
+    cin >> events[i];
+}
+
+ int untreat=0;
+ int crimes=0;
+ int police=0;
+ for (int i=0;i<n;i++){
+    if (events[i]<0){
+        crimes++;
+        if ( police >= crimes){
+            police=police-crimes;
+            crimes--;
+        } else if  (police < crimes){
+            untreat++;
+            crimes=0;
+        }
+    } else if (events[i]>0){
+    police=police + events[i];
+    }
+ }
+ cout << untreat;
+ return 0;
+
+}
