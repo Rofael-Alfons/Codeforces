@@ -1,0 +1,4 @@
+function countBy(x, n) {
+  const z = Array.from({ length: n }, (_, i) => (i + 1) * x);
+  return z;
+}
