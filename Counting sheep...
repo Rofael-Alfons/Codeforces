@@ -1,0 +1,4 @@
+function countSheeps(arrayOfSheep) {
+  const count = arrayOfSheep.reduce((cur,sheep)=>sheep===true ? cur +sheep:cur+0,0 );
+  return count;
+}
