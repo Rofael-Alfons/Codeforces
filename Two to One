@@ -1,0 +1,6 @@
+function longest(s1, s2) {
+  const s1New = [...new Set([...s1].sort())].join("");
+  const s2New = [...new Set([...s2].sort())].join("");
+  const sNew = [...new Set(s1New + s2New)].sort().join("");
+  return sNew;
+}
