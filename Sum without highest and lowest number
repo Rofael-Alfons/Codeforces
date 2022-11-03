@@ -1,0 +1,19 @@
+function sumArray(array) {
+  if (
+    array === null ||
+    array === undefined ||
+    array === 0 ||
+    array.length === 1
+  ) {
+    return 0;
+  } else {
+    let newarr = array.sort(function (a, b) {
+      return a - b;
+    });
+    newarr.pop();
+    newarr.shift();
+    return newarr.reduce(function (acc, num) {
+      return num + acc;
+    }, 0);
+  }
+}
