@@ -1,0 +1,13 @@
+function isPangram(sentence) {
+  let word = new Set(
+    sentence.split(" ").join("").toLocaleLowerCase().split("")
+  );
+  word.forEach((letter) => {
+    if (!letter.match(/[a-zA-Z]/)) {
+      word.delete(letter);
+    }
+  });
+  if (word.size === 26) {
+    return true;
+  } else return false;
+}
